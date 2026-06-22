@@ -147,9 +147,9 @@ body::after {
 }
 
 .site-logo-link {
-    width: 34px;
-    height: 34px;
-    flex: 0 0 34px;
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid rgba(216, 194, 255, 0.28);
