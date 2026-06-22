@@ -2,131 +2,260 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Progress Log</title>
+    <title>3D Rendering Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="rotoscope-progress.html">Rotoscope</a>
-                <ul class="submenu">
-                    <li><a href="rotoscope-progress.html">Project Page</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">3D Rendering</a>
-                <ul class="submenu">
-                    <li><a href="rendering-progress.html">Weekly Progress</a></li>
-                    <li><a href="rendering-final.html">Final Output</a></li>
-                </ul>
-            </li>
+            <li><a href="rotoscope-progress.html">Rotoscope</a></li>
+            <li><a href="rendering-progress.html">3D Rendering</a></li>
         </ul>
     </nav>
 
     <main class="content-container">
-        <h2>Weekly Progress Log</h2>
+        <section class="feature-panel project-section">
+            <div class="feature-grid">
+                <div>
+                    <p class="section-label">3D Rendering</p>
+                    <h1 class="section-title">Final Solar System Output</h1>
+                    <p class="section-copy">
+                        This page now acts as the single 3D project page, with the final solar system video featured at the top and the planet age calculator work displayed below.
+                    </p>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 1: Earth</h3>
-                <span class="date">April 20, 2026</span>
-            </div>
-            <p>Earth is the third planet from the Sun and the only known astronomical object to support life. It is a terrestrial planet with a solid surface, composed primarily of rock and metal, characterized by a dynamic atmosphere and liquid water. It also refers to soil, ground, or the world as opposed to heaven.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/BZ-Tkcs5msg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </article>
+                    <div class="main-video-wrap">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="3D rendering final placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 2: Mars</h3>
-                <span class="date">April 27, 2026</span>
+                <aside class="detail-list" aria-label="Project details">
+                    <div class="detail-item">
+                        <strong>Main Video</strong>
+                        <span>Upload your finished solar system render here as the primary showcase.</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Page Structure</strong>
+                        <span>The old progress/final split has been removed in favor of one combined project page.</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Theme Match</strong>
+                        <span>The layout now follows the same starry purple visual style as the rest of the site.</span>
+                    </div>
+                </aside>
             </div>
-            <p>Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System. It is often called the "Red Planet" due to its reddish appearance caused by iron oxide on its surface.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/3HzcBp4ALrI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </article>
+        </section>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 3: Sun</h3>
-                <span class="date">May 4, 2026</span>
+        <section class="planet-calculator-section">
+            <div class="section-heading">
+                <p class="section-label">Interactive Feature</p>
+                <h2>Calculate Your Age on Other Planets</h2>
+                <p>Enter your Earth age and the page will show your equivalent age across the solar system.</p>
             </div>
-            <p>The Sun is the star located at the centre of the Solar System. It is a massive sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy from its surface mainly as visible light and infrared radiation with 10% at ultraviolet energies. It is the main source of energy for life on Earth.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/UuMKBQXEipM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </article>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 4: Jupiter</h3>
-                <span class="date">May 17, 2026</span>
+            <div class="age-calculator-panel">
+                <label class="sr-only" for="earthAge">Enter your Earth age</label>
+                <div class="calculator-controls">
+                    <input type="number" id="earthAge" min="0" step="0.1" placeholder="Enter your Earth age">
+                    <button type="button" class="primary-button" onclick="calculatePlanetAges()">Calculate Ages</button>
+                </div>
+                <p class="calculator-note">The conversion uses each planet's orbital period relative to Earth.</p>
             </div>
-            <p>Jupiter is the fifth planet from the Sun, and the largest in the Solar System. It is a gas giant with a mass nearly 2.5 times that of all the other planets in the Solar System combined and slightly less than one-thousandth the mass of the Sun.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/bbBcmRLJbUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </article>
+        </section>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 5: Mercury</h3>
-                <span class="date">May 18, 2026</span>
+        <section class="planet-showcase-section">
+            <div class="section-heading">
+                <p class="section-label">Planet Rows</p>
+                <h2>Planet GIF Showcase</h2>
+                <p>Each GIF loops continuously while the page is open so the planets stay animated.</p>
             </div>
-            <p>Mercury is the first planet from the Sun and the smallest in the Solar System. It is a rocky planet with a trace atmosphere and a surface gravity slightly higher than that of Mars.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/sVs8-prN3AQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </article>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 6: Neptune</h3>
-                <span class="date">May 19, 2026</span>
-            </div>
-            <p>Neptune is the eighth and farthest known planet orbiting the Sun. It is the fourth-largest planet in the Solar System by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/vgWqKvMBZCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </article>
+            <div class="planet-calculator-panel">
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/sun.gif" alt="Sun animated GIF"></div>
+                    <div>
+                        <h3>Sun</h3>
+                        <p>The star at the center of the solar system, powering every planet around it.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>274 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>1,392,700 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>5,500 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong>Not calculated</strong></div>
+                        </div>
+                    </div>
+                </article>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 7: Saturn</h3>
-                <span class="date">May 20, 2026</span>
-            </div>
-            <p>Saturn is the sixth planet from the Sun and the second largest in the Solar System, after Jupiter. It is a gas giant, with an average radius of about 9 times that of Earth. It has an eighth of the average density of Earth, but is over 95 times more massive.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/BAg_kOC3AVg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </article>
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/mercury.gif" alt="Mercury animated GIF"></div>
+                    <div>
+                        <h3>Mercury</h3>
+                        <p>Closest to the Sun, small, rocky, and covered with craters.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>3.7 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>4,879 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>-173 C to 427 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong id="mercury-age-display">Enter your age above</strong></div>
+                        </div>
+                    </div>
+                </article>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 8: Uranus</h3>
-                <span class="date">May 21, 2026</span>
-            </div>
-            <p>Uranus is the seventh planet from the Sun. It is a gaseous cyan-coloured ice giant. Most of the planet is made of water, ammonia, and methane in a supercritical phase of matter, which astronomy calls "ice" or volatiles.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/zGTDU4gfloM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </article>
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/venus.gif" alt="Venus animated GIF"></div>
+                    <div>
+                        <h3>Venus</h3>
+                        <p>A bright, thick-clouded world with a runaway greenhouse effect.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>8.87 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>12,104 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>465 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong id="venus-age-display">Enter your age above</strong></div>
+                        </div>
+                    </div>
+                </article>
 
-        <article class="update-card">
-            <div class="update-header">
-                <h3>Week 9: Venus</h3>
-                <span class="date">May 22, 2026</span>
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/earth.gif" alt="Earth animated GIF"></div>
+                    <div>
+                        <h3>Earth</h3>
+                        <p>The home world, with liquid water, atmosphere, and life.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>9.81 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>12,742 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>-89 C to 58 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong id="earth-age-display">Enter your age above</strong></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/mars.gif" alt="Mars animated GIF"></div>
+                    <div>
+                        <h3>Mars</h3>
+                        <p>The red planet, dusty and cold with giant valleys and craters.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>3.71 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>6,779 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>-125 C to 20 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong id="mars-age-display">Enter your age above</strong></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/jupiter.gif" alt="Jupiter animated GIF"></div>
+                    <div>
+                        <h3>Jupiter</h3>
+                        <p>The largest planet, known for its storms, stripes, and giant presence.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>24.79 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>139,820 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>-108 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong id="jupiter-age-display">Enter your age above</strong></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/saturn.gif" alt="Saturn animated GIF"></div>
+                    <div>
+                        <h3>Saturn</h3>
+                        <p>Famous for its rings and soft golden atmosphere.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>10.44 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>116,460 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>-139 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong id="saturn-age-display">Enter your age above</strong></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/uranus.gif" alt="Uranus animated GIF"></div>
+                    <div>
+                        <h3>Uranus</h3>
+                        <p>An icy blue-green giant tilted dramatically on its side.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>8.69 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>50,724 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>-197 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong id="uranus-age-display">Enter your age above</strong></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="planet-card planet-row">
+                    <div class="planet-row-media"><img src="Planet GIFs/neptune.gif" alt="Neptune animated GIF"></div>
+                    <div>
+                        <h3>Neptune</h3>
+                        <p>Dark blue, cold, and far away with fast winds and a deep atmosphere.</p>
+                        <div class="planet-facts">
+                            <div class="planet-fact"><span>Gravity</span><strong>11.15 m/s2</strong></div>
+                            <div class="planet-fact"><span>Diameter</span><strong>49,244 km</strong></div>
+                            <div class="planet-fact"><span>Temperature</span><strong>-201 C</strong></div>
+                            <div class="planet-fact"><span>Age Result</span><strong id="neptune-age-display">Enter your age above</strong></div>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <p>Venus is the second planet from the Sun. Similar in size and mass to Earth, Venus has no liquid water, and its atmosphere is far thicker and denser than that of any other rocky body in the Solar System.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/MjFzt2JVYTk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+
+        <section class="age-summary-section">
+            <div class="section-heading">
+                <p class="section-label">Age Summary</p>
+                <h2>Calculation Results</h2>
+                <p>The results below update alongside the planet rows.</p>
             </div>
-        </article>
+
+            <div class="summary-grid">
+                <div class="summary-card"><h3>Mercury</h3><p id="mercury-age">-</p></div>
+                <div class="summary-card"><h3>Venus</h3><p id="venus-age">-</p></div>
+                <div class="summary-card"><h3>Earth</h3><p id="earth-age">-</p></div>
+                <div class="summary-card"><h3>Mars</h3><p id="mars-age">-</p></div>
+                <div class="summary-card"><h3>Jupiter</h3><p id="jupiter-age">-</p></div>
+                <div class="summary-card"><h3>Saturn</h3><p id="saturn-age">-</p></div>
+                <div class="summary-card"><h3>Uranus</h3><p id="uranus-age">-</p></div>
+                <div class="summary-card"><h3>Neptune</h3><p id="neptune-age">-</p></div>
+            </div>
+        </section>
     </main>
+
+    <script>
+        const planetOrbitalPeriods = {
+            mercury: 0.24,
+            venus: 0.62,
+            earth: 1,
+            mars: 1.88,
+            jupiter: 11.86,
+            saturn: 29.46,
+            uranus: 84.01,
+            neptune: 164.8
+        };
+
+        function calculatePlanetAges() {
+            const earthAge = parseFloat(document.getElementById("earthAge").value);
+
+            if (isNaN(earthAge) || earthAge <= 0) {
+                alert("Please enter a valid age as a positive number.");
+                return;
+            }
+
+            for (const planet in planetOrbitalPeriods) {
+                const age = (earthAge / planetOrbitalPeriods[planet]).toFixed(2);
+                const showcaseElement = document.getElementById(`${planet}-age-display`);
+                const summaryElement = document.getElementById(`${planet}-age`);
+
+                if (showcaseElement) {
+                    showcaseElement.textContent = `${age} years old`;
+                }
+
+                if (summaryElement) {
+                    summaryElement.textContent = `${age} years old`;
+                }
+            }
+        }
+    </script>
 
     <footer class="site-footer">
         <div class="footer-inner">
