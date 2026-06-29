@@ -513,11 +513,11 @@ body::after {
 }
 
 .planet-row {
-    display: grid;
-    grid-template-columns: 200px minmax(0, 1fr);
-    gap: 22px;
-    align-items: center;
-    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 22px 20px 20px;
     animation: cardPop 0.72s ease both;
 }
 
@@ -534,9 +534,10 @@ body::after {
 }
 
 .planet-row-media {
-    width: 200px;
-    min-height: 200px;
-    border-radius: 24px;
+    width: min(100%, 320px);
+    height: 240px;
+    margin: 0 auto;
+    border-radius: 26px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(216, 194, 255, 0.14);
@@ -554,6 +555,21 @@ body::after {
     display: block;
 }
 
+.planet-row > div:last-child {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    flex: 1;
+}
+
+.planet-row > div:last-child h3 {
+    margin-top: 0;
+}
+
+.planet-row > div:last-child p {
+    margin-bottom: 0;
+}
+
 .planet-row h3 {
     font-size: 1.35rem;
     margin-bottom: 6px;
@@ -564,6 +580,7 @@ body::after {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 10px;
     margin: 12px 0;
+    margin-top: auto;
 }
 
 .planet-fact {
@@ -945,13 +962,13 @@ body::after {
     }
 
     .planet-row {
-        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .planet-row-media {
         width: 100%;
-        max-width: 280px;
-        min-height: 220px;
+        max-width: 320px;
+        height: 220px;
         margin: 0 auto;
     }
 
