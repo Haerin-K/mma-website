@@ -516,8 +516,8 @@ body::after {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 18px;
-    padding: 22px 20px 20px;
+    gap: 16px;
+    padding: 22px 18px 20px;
     animation: cardPop 0.72s ease both;
 }
 
@@ -534,8 +534,8 @@ body::after {
 }
 
 .planet-row-media {
-    width: min(100%, 320px);
-    height: 240px;
+    width: min(100%, 100%);
+    height: clamp(240px, 34vw, 360px);
     margin: 0 auto;
     border-radius: 26px;
     overflow: hidden;
@@ -967,8 +967,8 @@ body::after {
 
     .planet-row-media {
         width: 100%;
-        max-width: 320px;
-        height: 220px;
+        max-width: none;
+        height: 240px;
         margin: 0 auto;
     }
 
